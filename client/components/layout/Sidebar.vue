@@ -133,7 +133,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~bulma/sass/utilities/variables';
+@import '~bulma/sass/utilities/all';
 @import '~bulma/sass/utilities/mixins';
 
 .app-sidebar {

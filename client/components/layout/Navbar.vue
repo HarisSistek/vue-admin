@@ -1,25 +1,17 @@
 <template>
-  <section class="hero is-bold app-navbar animated" :class="{ slideInDown: show, slideOutDown: !show }">
+  <section class="hero is-white app-navbar">
     <div class="hero-head">
-      <nav class="nav">
-        <div class="nav-left">
-          <a class="nav-item is-hidden-tablet" @click="toggleSidebar({opened: !sidebar.opened})">
-            <i class="fa fa-bars" aria-hidden="true" v-show="!sidebar.hidden"></i>
+      <nav class="navbar" role="navigation" aria-label="main navigation">
+        <div class="navbar-brand">
+          <a class="navbar-item" href="https://bulma.io">
+            <img src="https://bulma.io/images/bulma-logo.png" alt="Bulma: a modern CSS framework based on Flexbox" width="112" height="28">
           </a>
-        </div>
-        <div class="nav-center">
-          <a class="nav-item hero-brand" href="/">
-            <img src="~assets/logo.svg" :alt="pkginfo.description">
-            <tooltip :label="'v' + pkginfo.version" placement="right" type="success" size="small" :no-animate="true" :always="true" :rounded="true">
-              <div class="is-hidden-mobile">
-                <span class="vue">Vue</span><strong class="admin">Admin</strong>
-              </div>
-            </tooltip>
+
+          <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
           </a>
-        </div>
-        <div class="nav-right is-flex">
-          <router-link v-if="!$auth.check()" to="/login" class="nav-item">Login</router-link>
-          <a v-if="$auth.check()" @click="logout" class="nav-item">Logout</a>
         </div>
       </nav>
     </div>
@@ -27,14 +19,9 @@
 </template>
 
 <script>
-import Tooltip from 'vue-bulma-tooltip'
 import { mapGetters, mapActions } from 'vuex'
 
 export default {
-
-  components: {
-    Tooltip
-  },
 
   props: {
     show: Boolean
@@ -64,7 +51,7 @@ export default {
 </script>
 
 <style lang="scss">
-@import '~bulma/sass/utilities/variables';
+@import '~bulma/sass/utilities/all';
 
 .app-navbar {
   position: fixed;
@@ -77,7 +64,6 @@ export default {
   }
 
   .nav-right {
-    align-items: stretch;
     align-items: stretch;
     flex: 1;
     justify-content: flex-end;
