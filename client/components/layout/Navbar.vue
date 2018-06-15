@@ -10,11 +10,11 @@
         <div class="nav-center">
           <a class="nav-item hero-brand" href="/">
             <img src="~assets/logo.svg" :alt="pkginfo.description">
-            <tooltip :label="'v' + pkginfo.version" placement="right" type="success" size="small" :no-animate="true" :always="true" :rounded="true">
-              <div class="is-hidden-mobile">
-                <span class="vue">Vue</span><strong class="admin">Admin</strong>
-              </div>
-            </tooltip>
+            <!--<tooltip :label="'v' + pkginfo.version" placement="right" type="success" size="small" :no-animate="true" :always="true" :rounded="true">-->
+              <!--<div class="is-hidden-mobile">-->
+                <!--<span class="vue">Vue</span><strong class="admin">Admin</strong>-->
+              <!--</div>-->
+            <!--</tooltip>-->
           </a>
         </div>
         <div class="nav-right is-flex">
@@ -27,14 +27,9 @@
 </template>
 
 <script>
-// import Tooltip from 'vue-bulma-tooltip'
 import { mapGetters, mapActions } from 'vuex'
 
 export default {
-
-  // components: {
-  //   Tooltip
-  // },
 
   props: {
     show: Boolean
@@ -77,7 +72,6 @@ export default {
   }
 
   .nav-right {
-    align-items: stretch;
     align-items: stretch;
     flex: 1;
     justify-content: flex-end;
