@@ -27,14 +27,14 @@
 </template>
 
 <script>
-import Tooltip from 'vue-bulma-tooltip'
+// import Tooltip from 'vue-bulma-tooltip'
 import { mapGetters, mapActions } from 'vuex'
 
 export default {
 
-  components: {
-    Tooltip
-  },
+  // components: {
+  //   Tooltip
+  // },
 
   props: {
     show: Boolean

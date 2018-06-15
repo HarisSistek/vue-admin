@@ -68,14 +68,14 @@
 </template>
 
 <script>
-import Tooltip from 'vue-bulma-tooltip'
-import Slider from 'vue-bulma-slider'
+// import Tooltip from 'vue-bulma-tooltip'
+// import Slider from 'vue-bulma-slider'
 
 export default {
-  components: {
-    Tooltip,
-    Slider
-  },
+  // components: {
+  //   // Tooltip,
+  //   Slider
+  // },
 
   data () {
     return {
